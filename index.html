@@ -153,6 +153,48 @@ footer a{color:var(--clay-lt);text-decoration:none;font-weight:600}
 .lq-note{font-size:12.5px;color:var(--green-dp);background:var(--sage-pale);border-inline-start:3px solid var(--green);padding:8px 12px;line-height:1.7;margin-top:10px}
 .lq-hint{margin:-2px 0 10px}
 @media (prefers-reduced-motion:reduce){.lq-card .lq-in{transition:none}}
+
+/* ===== اقتراح فكرة (#/fikra) ===== */
+#vFikra{display:none;padding-bottom:0}
+#vFikra .abar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;height:46px;padding:0 18px;background:#fff;border-bottom:1px solid var(--hair);font-size:13px}
+#vFikra .abar a{color:var(--green);font-weight:700;text-decoration:none}
+#vFikra .abar span{font-family:Amiri,serif;font-size:20px;font-weight:700;color:var(--green)}
+#vFikra .hero{padding-top:28px}
+#vFikra .hero h1{font-size:40px}
+.fk .q{margin-bottom:20px}
+.fk .ql{display:block;font-size:14px;font-weight:600;margin-bottom:4px;color:var(--green-dp)}
+.fk .qh{display:block;font-size:12.5px;color:var(--muted);margin:-2px 0 9px;line-height:1.7}
+.fk .req{color:var(--clay)}
+.fk .ch{display:flex;flex-wrap:wrap;gap:8px}
+.fk .ch label{position:relative;cursor:pointer;margin:0}
+.fk .ch input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0}
+.fk .ch span{display:inline-block;padding:8px 14px;border:1px solid var(--hair);background:var(--cream);font-size:13.5px;color:var(--ink);line-height:1.6;transition:border-color .15s,background .15s}
+.fk .ch label:hover span{border-color:var(--sage)}
+.fk .ch input:checked+span{border-color:var(--clay);background:var(--clay-pale);color:var(--green-dp);font-weight:700}
+.fk .ch input:focus-visible+span{outline:2px solid var(--clay);outline-offset:2px}
+.fk .two{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:480px){.fk .two{grid-template-columns:1fr}}
+.fk details.more{border:1px solid var(--hair);background:var(--paper);margin:6px 0 24px}
+.fk details.more summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.fk details.more summary::-webkit-details-marker{display:none}
+.fk details.more summary b{font-family:Amiri,serif;font-size:19px;color:var(--green-dp)}
+.fk details.more summary b::after{content:"＋";float:left;color:var(--clay);font-family:"IBM Plex Sans Arabic",sans-serif;font-size:16px}
+.fk details.more[open] summary b::after{content:"－"}
+.fk details.more summary small{font-size:12.5px;color:var(--muted)}
+.fk details.more .in{padding:4px 16px 2px;border-top:1px solid var(--hair)}
+.fk .gets{background:var(--paper);border:1px solid var(--hair);padding:16px 16px 10px;margin:0 0 4px}
+.fk .gets .gt{font-family:Amiri,serif;font-size:20px;font-weight:700;color:var(--green-dp);margin-bottom:6px}
+.fk-up{background:rgba(255,255,255,.08);border:1px solid rgba(207,224,214,.3);padding:14px 16px;margin:0 0 20px;font-size:13.5px;line-height:1.85;color:#fff;text-align:right}
+.fk-up b{color:var(--clay-lt)}
+.fk-warn{background:#FBEDE6;color:#8C3D1E;border-right:3px solid var(--clay);padding:10px 14px;font-size:13.5px;font-weight:600;margin:0 0 14px;text-align:right}
+.fk-done{background:var(--paper);border:1px solid var(--hair);padding:22px 18px;margin:26px 0;text-align:right}
+.fk-done h3{font-family:Amiri,serif;font-size:26px;color:var(--green-dp);margin-bottom:6px}
+.fk-done p{font-size:14px;color:var(--ink);margin-bottom:8px}
+.fk-done .oid{color:var(--clay);direction:ltr;unicode-bidi:isolate}
+.fk-done .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.fk-done .acts a,.fk-done .acts button{font:inherit;font-size:13.5px;font-weight:700;padding:10px 16px;cursor:pointer;text-decoration:none;border:1px solid var(--hair);background:var(--cream);color:var(--green-dp)}
+.fk-done .acts a{background:var(--clay);border-color:var(--clay);color:#fff}
+.fk-done textarea{font-size:12.5px;min-height:90px;margin-top:8px}
 </style></head><body><div id="vMain" dir="rtl">
 <div class="top"><div class="wrap in"><div class="wm">قيمة<span>وثائق بمعايير احترافية</span></div><div class="tag-off">خدمات قيمة</div></div></div><section class="hero">
   <div class="wrap">
@@ -191,7 +233,7 @@ footer a{color:var(--clay-lt);text-decoration:none;font-weight:600}
   </svg>
 </section><div class="stats">
   <div><b>٢٤</b>ساعة للتسليم</div>
-  <div><b>٥</b>خدمات مكتبية</div>
+  <div><b>٦</b>خدمات مكتبية</div>
 </div><div id="pick">
   <div class="wrap">
     <div class="sh"><span class="lbl">الخدمات</span><h2>اختر خدمتك</h2><p>ستظهر لك أسئلة الخدمة المختارة فقط</p><div class="dv"></div></div>
@@ -199,6 +241,11 @@ footer a{color:var(--clay-lt);text-decoration:none;font-weight:600}
     <a class="svc c5" href="#/atlaq" aria-label="فتح خدمة أطلق"><span class="pic">
         <svg class="art" viewBox="0 0 300 108" aria-hidden="true"><rect x="86" y="12" width="128" height="86" rx="3" fill="#fff" stroke="#EADBCD"/><circle cx="150" cy="45" r="22" fill="#EDF4F0" stroke="#7FA893" stroke-width="2"/><path d="M150 28c8 7 11 16 10 26l-10 8-10-8c-1-10 2-19 10-26z" fill="#2F6B54"/><circle cx="150" cy="42" r="3" fill="#FDFAF4"/><path d="M143 61l-3 9 10-5 10 5-3-9" fill="#C4784E"/><rect x="108" y="77" width="84" height="5" rx="2.5" fill="#E6E0D4"/><rect x="52" y="30" width="24" height="56" rx="3" fill="#FBF7EF" stroke="#EFE6DC" opacity=".9"/><rect x="224" y="30" width="24" height="56" rx="3" fill="#FBF7EF" stroke="#EFE6DC" opacity=".9"/></svg></span>
       <span class="bd"><span class="nm">أطلق</span><span class="ds">من فكرة إلى مشروع جاهز: اسم، شعار، ألوان وخطوط، وخطة إطلاق ٣٠ يوم</span><span class="r2"><span class="lb">تبدأ من</span><span><span class="pv">٩٩</span></span></span></span>
+    </a>
+
+    <a class="svc c4" href="#/fikra" aria-label="فتح خدمة اقتراح فكرة مشروع"><span class="pic">
+        <svg class="art" viewBox="0 0 300 108" aria-hidden="true"><rect x="100" y="12" width="100" height="86" rx="3" fill="#fff" stroke="#EADBCD"/><path d="M150 26c-12 0-20 9-20 19 0 8 4 12 8 16 2 2 4 5 4 8h16c0-3 2-6 4-8 4-4 8-8 8-16 0-10-8-19-20-19z" fill="#EDF4F0" stroke="#2F6B54" stroke-width="2.5" stroke-linejoin="round"/><path d="M143 76h14M145 82h10" stroke="#2F6B54" stroke-width="2.5" stroke-linecap="round"/><path d="M144 50l6-7 6 7" fill="none" stroke="#C4784E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="58" y="34" width="30" height="40" rx="3" fill="#FBF7EF" stroke="#EFE6DC"/><text x="73" y="61" font-size="18" font-family="Amiri,serif" font-weight="700" fill="#C4784E" text-anchor="middle">١</text><rect x="212" y="34" width="30" height="40" rx="3" fill="#FBF7EF" stroke="#EFE6DC"/><text x="227" y="61" font-size="18" font-family="Amiri,serif" font-weight="700" fill="#2F6B54" text-anchor="middle">٢</text></svg></span>
+      <span class="bd"><span class="nm">اقتراح فكرة مشروع</span><span class="ds">محتار وش تبدأ؟ نقترح لك ٣ أفكار مشاريع تناسب اهتماماتك وميزانيتك ووقتك</span><span class="r2"><span class="lb">السعر</span><span><span class="pv">٤٩</span></span></span></span>
     </a>
 
     <button class="svc c4 off" type="button" disabled aria-disabled="true" aria-label="خدمة تصميم الشعار متوقفة حالياً"><span class="offtag">متوقفة حالياً</span><span class="pic">
@@ -413,6 +460,91 @@ footer a{color:var(--clay-lt);text-decoration:none;font-weight:600}
 <div class="fpol"><a href="#/privacy">سياسة الخصوصية</a><a href="#/terms">الشروط والأحكام</a><a href="#/refund">الاسترجاع والإلغاء</a></div></footer><div class="dock"><div class="wrap in3"><div class="dp"><small id="dk_lbl">ابدأ الآن</small><b id="dk_val">قيمة</b></div><a href="#" id="dk_btn" target="_blank" rel="noopener" onclick="return dockGo(this)">واتساب</a></div></div>
 </div>
 <div id="vAtlaq" dir="rtl"></div>
+<div id="vFikra" dir="rtl"><div class="abar"><a href="#/">كل الخدمات</a><span>قيمة</span></div>
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">أطلق · اقتراح فكرة</span>
+    <h1>محتار وش<br>مشروعك الأول؟</h1>
+    <p class="lede">جاوب على أسئلة قليلة عنك وعن ظروفك، ونرسل لك ٣ أفكار مشاريع مفصّلة على مقاسك خلال ٢٤ ساعة.</p>
+  </div>
+  <svg class="art" viewBox="0 0 800 220" aria-hidden="true">
+    <path d="M0 150 C120 112 210 152 330 140 C452 128 540 100 660 124 C724 136 764 144 800 138 L800 220 L0 220Z" fill="#EBDCC0"/>
+    <path d="M0 190 C110 164 190 192 300 186 C430 178 520 158 640 176 C712 187 762 194 800 190 L800 220 L0 220Z" fill="#DFC9A5"/>
+    <g transform="translate(400,92)">
+      <circle r="58" fill="#FDFAF4" stroke="#E2DCCF"/>
+      <path d="M0-34c-17 0-29 13-29 28 0 11 6 18 12 24 3 3 5 7 5 11h24c0-4 2-8 5-11 6-6 12-13 12-24 0-15-12-28-29-28z" fill="#EDF4F0" stroke="#2F6B54" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M-10 36h20M-7 44h14" stroke="#2F6B54" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-8 6l8-10 8 10" fill="none" stroke="#C4784E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g fill="#C4784E"><circle cx="318" cy="66" r="5"/><circle cx="486" cy="58" r="4"/><circle cx="500" cy="122" r="3"/><circle cx="300" cy="118" r="3"/></g>
+    <g transform="translate(232,72)" opacity=".9"><rect width="54" height="68" rx="3" fill="#fff" stroke="#E2DCCF"/><text x="27" y="44" font-size="28" font-family="Amiri,serif" font-weight="700" fill="#C4784E" text-anchor="middle">١</text></g>
+    <g transform="translate(514,84)" opacity=".9"><rect width="54" height="68" rx="3" fill="#fff" stroke="#E2DCCF"/><text x="27" y="44" font-size="28" font-family="Amiri,serif" font-weight="700" fill="#2F6B54" text-anchor="middle">٢</text></g>
+    <g transform="translate(150,104)" opacity=".7"><rect width="44" height="56" rx="3" fill="#FBF7EF" stroke="#E2DCCF"/><text x="22" y="37" font-size="23" font-family="Amiri,serif" font-weight="700" fill="#7FA893" text-anchor="middle">٣</text></g>
+  </svg>
+</section>
+<div class="sheet"><div class="wrap fk" id="fkForm">
+  <div class="trust" style="margin-top:22px"><div class="tr1"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="ttx"><b>موثّق بوثيقة العمل الحر</b><span>رقم الوثيقة: <bdi>FL-609187681</bdi></span></div><span class="tbtns"><button type="button" class="tcopy" onclick="copyDoc(this)">نسخ الرقم</button></span><div class="thow">للتحقق: ابحث بنفسك في قوقل عن «منصة العمل الحر»، وتأكد إن الرابط <bdi>freelance.sa</bdi>، واختر «تحقق من الوثيقة» والصق الرقم. ما نرسل لك رابط، عشان تتأكد إنك في الموقع الرسمي.</div></div><div class="tpriv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><div>إجاباتك ما تنحفظ في الموقع. تنرسل لنا مباشرة في واتساب من جوالك، وتشوف الرسالة كاملة قبل ما ترسلها.</div></div></div>
+
+  <div class="gets">
+    <div class="gt">وش يوصلك؟</div>
+    <div class="perk"><i></i>ملف PDF فيه ٣ أفكار مشاريع مختلفة، مبنية على إجاباتك أنت</div>
+    <div class="perk"><i></i>لكل فكرة: وش تبيع ولمين، وليش تناسبك بالذات</div>
+    <div class="perk"><i></i>تكلفة البداية التقريبية، ومستوى الصعوبة، وأول منتجات أو خدمات تبدأ فيها</div>
+    <div class="perk"><i></i>أهم تحدي لازم تنتبه له قبل ما تبدأ</div>
+  </div>
+
+  <div class="sh"><span class="lbl">القسم الأول</span><h2>وين أنت الحين؟</h2><div class="dv"></div></div>
+  <div class="q" id="fk_pathQ">
+    <label class="opt"><input type="radio" name="fk_path" value="2" data-v="ما عندي فكرة، اقترحوا لي"><span class="in2"><span class="dot"></span><span class="txt"><b>ما عندي فكرة</b><small>أبي أبدأ مشروع، اقترحوا لي اللي يناسبني</small></span></span></label>
+    <label class="opt"><input type="radio" name="fk_path" value="1" data-v="عندي فكرة بس محتار"><span class="in2"><span class="dot"></span><span class="txt"><b>عندي أفكار بس محتار</b><small>قارنوا بينها، واقترحوا الأقوى أو أفضل منها</small></span></span></label>
+  </div>
+  <div class="q" id="fk_ideasQ" hidden><span class="ql">الأفكار اللي في بالك <span class="req">*</span></span><span class="qh">اكتبها كلها ولو كانت بسيطة</span><textarea id="fk_ideasList" placeholder="مثال: كوفي متنقل، متجر عطور، تنسيق حفلات"></textarea></div>
+
+  <div class="sh"><span class="lbl">القسم الثاني</span><h2>وش تحب أو تتقن؟</h2><p>الفكرة الناجحة تبدأ من شي تعرفه أو تحبه</p><div class="dv"></div></div>
+  <div class="q"><span class="ql">اهتماماتك ومهاراتك <span class="req">*</span></span><span class="qh">اختر كل اللي ينطبق عليك، ولو اهتمامك مو موجود اكتبه تحت</span>
+    <div class="ch" id="fk_skills" data-label="المهارات والاهتمامات" data-type="check" data-opts="الطبخ والحلويات|القهوة والمشروبات|التصميم والرسم|الخياطة والأزياء|التجميل والعناية|العطور والبخور|التصوير والمونتاج|البيع والتفاوض|التسويق والسوشال|التقنية والجوال|التعليم والتدريس|الأعمال اليدوية|التنظيم والمناسبات|الرياضة واللياقة|السيارات|الزراعة والنباتات|الحيوانات الأليفة|الكتابة واللغات"></div></div>
+  <div class="q"><span class="ql">اهتمام ثاني مو موجود فوق</span><input type="text" id="fk_skillsOther" placeholder="مثال: الرحلات البرية والتخييم"></div>
+  <div class="q"><span class="ql">خبرة أو شهادة عندك</span><input type="text" id="fk_exp" placeholder="مثال: اشتغلت ٣ سنين في محل جوالات، أو دبلوم محاسبة"></div>
+
+  <div class="sh"><span class="lbl">القسم الثالث</span><h2>ظروفك</h2><p>عشان تكون الأفكار واقعية وتقدر تبدأ فيها</p><div class="dv"></div></div>
+  <div class="q"><span class="ql">ميزانية البداية <span class="req">*</span></span><span class="qh">المبلغ اللي تقدر تصرفه قبل أول بيعة</span>
+    <div class="ch" id="fk_budget" data-label="الميزانية" data-type="radio" data-opts="بدون ميزانية تقريبًا|أقل من ٥ آلاف ريال|٥–٢٠ ألف ريال|٢٠–٥٠ ألف ريال|أكثر من ٥٠ ألف ريال"></div></div>
+  <div class="two">
+    <div class="q"><span class="ql">بتشتغل على المشروع</span><div class="ch" data-label="التفرغ" data-type="radio" data-opts="جنب الدوام أو الدراسة|تفرغ كامل"></div></div>
+    <div class="q"><span class="ql">كم ساعة تقدر تعطيه يوميًا؟</span><div class="ch" data-label="الساعات اليومية" data-type="radio" data-opts="ساعة أو أقل|٢–٣ ساعات|٤–٦ ساعات|أكثر"></div></div>
+  </div>
+  <div class="two">
+    <div class="q"><span class="ql">مدينتك</span><input type="text" id="fk_city" placeholder="مثال: الرياض"></div>
+    <div class="q"><span class="ql">تفضّل تبيع؟</span><div class="ch" data-label="منتج أو خدمة" data-type="radio" data-opts="منتجات|خدمات|ما يفرق معي"></div></div>
+  </div>
+  <div class="q"><span class="ql">وين تفضّل تشتغل؟</span><span class="qh">اختر كل الأماكن اللي تناسبك</span><div class="ch" id="fk_place" data-label="مكان العمل" data-type="check" data-opts="من البيت|متجر إلكتروني|محل|كشك أو عربة|معارض وبازارات|أونلاين فقط"></div></div>
+
+  <details class="more"><summary><b>تفاصيل إضافية <span style="font-weight:400;font-size:14px;color:var(--muted)">(اختياري)</span></b><small>تقدر تتخطاها، بس كل ما جاوبت أكثر طلعت الأفكار أدق</small></summary><div class="in">
+    <div class="q" style="margin-top:14px"><span class="ql">تحب تتعامل مع الناس؟</span><div class="ch" data-label="التعامل مع الناس" data-type="radio" data-opts="أحب التعامل المباشر|أونلاين أفضل|أفضل أشتغل لحالي"></div></div>
+    <div class="q"><span class="ql">وش أهم شي عندك في المشروع؟</span><div class="ch" data-label="أولوية المشروع" data-type="radio" data-opts="ربح سريع|دخل ثابت مع الوقت|شي أحبه وأستمتع فيه|يكبر ويصير شركة"></div></div>
+    <div class="q"><span class="ql">كم المخاطرة اللي تتحملها؟</span><span class="qh">يعني لو المشروع ما ربح في البداية، كم تتحمل خسارة</span><div class="ch" data-label="تحمل المخاطرة" data-type="radio" data-opts="قليلة، أبي أبدأ صغير|متوسطة|عالية، مستعد أغامر"></div></div>
+    <div class="q"><span class="ql">مين تحب تخدم؟</span><div class="ch" data-label="جنس العميل" data-type="radio" data-opts="نساء|رجال|الكل|شركات وجهات"></div></div>
+    <div class="q"><span class="ql">أفكار ما تبيها أو ما تناسبك</span><input type="text" id="fk_noIdea" placeholder="مثال: ما أبي شي فيه أكل، أو ما أبي محل"></div>
+    <div class="q"><span class="ql">شي ثاني تحب نعرفه؟</span><textarea id="fk_final" placeholder="أي ظرف أو رغبة تساعدنا نختار لك صح"></textarea></div>
+  </div></details>
+
+  <div class="sh"><span class="lbl">القسم الأخير</span><h2>بياناتك</h2><div class="dv"></div></div>
+  <div class="two">
+    <div class="q"><span class="ql">اسمك <span class="req">*</span></span><input type="text" id="fk_name" autocomplete="name" placeholder="مثال: محمد"></div>
+    <div class="q"><span class="ql">رقم جوالك <span class="req">*</span></span><input type="tel" id="fk_phone" autocomplete="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="05xxxxxxxx"></div>
+  </div>
+</div></div>
+<div class="final"><svg class="art" viewBox="0 0 800 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46 C130 10 240 40 380 24 C520 8 640 34 800 12 L800 46Z" fill="#2F6B54"/><path d="M0 46 C120 26 250 46 390 34 C530 22 650 42 800 28 L800 46Z" fill="#215140" opacity=".55"/></svg><div class="wrap">
+  <div class="fh">الخطوة الأخيرة</div><div class="fs">أرسل طلبك، وتوصلك الأفكار خلال ٢٤ ساعة من الدفع</div>
+  <div class="tot"><span class="lbl2">الإجمالي</span><div class="amt">٤٩ ريال</div></div>
+  <div class="fk-up">عجبتك فكرة وتبي نكمل عليها؟ <b>ادفع الفرق ١٠٠ ريال بس</b> وتاخذ باقة أطلق المتكاملة: الاسم والشعار والألوان والخطوط وخطة إطلاق ٣٠ يوم.</div>
+  <div class="fk-warn" id="fk_warn" hidden></div>
+  <button type="button" class="btn b-main" id="fk_send">إرسال الطلب عبر واتساب</button>
+  <a class="btn b-out" href="#/">رجوع لكل الخدمات</a>
+</div></div>
+<div class="wrap"><div class="fk-done" id="fk_done" hidden></div></div>
+</div>
+
 <div id="vPol" dir="rtl"><div class="abar"><a href="#/">كل الخدمات</a><span>قيمة</span></div><div class="wrap pol">
 <nav class="ptabs"><a href="#/privacy" data-p="privacy">سياسة الخصوصية</a><a href="#/terms" data-p="terms">الشروط والأحكام</a><a href="#/refund" data-p="refund">الاسترجاع والإلغاء</a></nav>
 <section id="p-privacy"><span class="pk">قيمة</span><h2>سياسة الخصوصية</h2><div class="upd">آخر تحديث: ٩ أكتوبر ٢٠٢٦</div>
@@ -635,6 +767,8 @@ function copyDoc(b){var t='FL-609187681',o=b.textContent;function ok(){b.textCon
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb);}else fb();}
 function route(){
   var a=/^#\/atlaq/.test(location.hash),m=document.getElementById('vMain'),w=document.getElementById('vAtlaq');
+  var fo=/^#\/fikra/.test(location.hash),fv=document.getElementById('vFikra');fv.style.display=fo?'block':'none';
+  if(fo){m.style.display='none';w.style.display='none';document.getElementById('vPol').style.display='none';window.scrollTo(0,0);if(window.fkShow)fkShow();return;}
   if(a){
     if(!w.firstChild){w.insertAdjacentHTML('beforeend','<div class="abar"><a href="#/">كل الخدمات</a><span>قيمة</span></div><div class="trust tmini"><div class="tr1"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="ttx"><b>موثّق بوثيقة العمل الحر</b><span>رقم الوثيقة: <bdi>FL-609187681</bdi></span></div><span class="tbtns"><button type="button" class="tcopy" onclick="copyDoc(this)">نسخ الرقم</button></span><div class="thow">للتحقق: ابحث بنفسك في قوقل عن «منصة العمل الحر»، وتأكد إن الرابط <bdi>freelance.sa</bdi>، واختر «تحقق من الوثيقة» والصق الرقم. ما نرسل لك رابط، عشان تتأكد إنك في الموقع الرسمي.</div></div><div class="tpriv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><div>إجاباتك ما تنحفظ في الموقع. تنرسل لنا مباشرة في واتساب من جوالك، وتشوف الرسالة كاملة قبل ما ترسلها.</div></div></div>');var f=document.createElement('iframe');f.title='أطلق';f.srcdoc=ATLAQ;w.appendChild(f);}
     m.style.display='none';w.style.display='block';window.scrollTo(0,0);
@@ -650,7 +784,7 @@ function route(){
 window.addEventListener('hashchange',route);route();
 (function(){
   var N={cv:'السيرة الذاتية',doc:'المستندات الرسمية',cat:'الكتالوج',logo:'تصميم شعار'};
-  function pv(){try{var h=location.hash,a=/^#\/atlaq/.test(h),q=(h.match(/^#\/(privacy|terms|refund)/)||[])[1],T={privacy:'سياسة الخصوصية',terms:'الشروط والأحكام',refund:'الاسترجاع والإلغاء'},pt=a?'أطلق':q?T[q]:'الرئيسية',pp=a?'/atlaq':q?'/'+q:'/';gtag('event','page_view',{page_title:pt,page_path:pp,page_location:location.origin+pp});}catch(e){}}
+  function pv(){try{var h=location.hash,a=/^#\/atlaq/.test(h),q=(h.match(/^#\/(privacy|terms|refund)/)||[])[1],T={privacy:'سياسة الخصوصية',terms:'الشروط والأحكام',refund:'الاسترجاع والإلغاء'},fo=/^#\/fikra/.test(h),pt=fo?'اقتراح فكرة':a?'أطلق':q?T[q]:'الرئيسية',pp=fo?'/fikra':a?'/atlaq':q?'/'+q:'/';gtag('event','page_view',{page_title:pt,page_path:pp,page_location:location.origin+pp});}catch(e){}}
   window.addEventListener('hashchange',pv);pv();
   if(typeof openS==='function'){var o=openS;openS=function(k){try{gtag('event','open_service',{service:N[k]||k});}catch(e){}return o.apply(this,arguments);};}
   if(typeof send==='function'){var s0=send;send=function(k){try{gtag('event','send_order',{service:N[k]||k});}catch(e){}return s0.apply(this,arguments);};}
@@ -700,6 +834,78 @@ function lqTypes(){var a=document.querySelectorAll('#lq_type input:checked'),r=[
   t.innerHTML=LQ_TYPES.map(function(x,i){return '<label class="lq-card"><input type="checkbox" id="logo_tp_'+i+'" value="'+lqEsc(x[0])+'"><span class="lq-in"><span class="lq-pic"><svg viewBox="0 0 120 60" aria-hidden="true"><rect width="120" height="60" fill="#FDFAF4"/>'+x[2]+'</svg></span><b>'+lqEsc(x[0])+'</b><small>'+lqEsc(x[1])+'</small></span></label>';}).join("");
   document.getElementById('lq_bg').addEventListener('change',lqDraw);
   lqDraw();
+})();
+</script>
+<script>
+/* ===== اقتراح فكرة: نموذج قصير يطلع كود ATQ1 بنفس ترتيب نموذج أطلق، عشان صفحة التوليد تقرأه بدون تعديل ===== */
+(function(){
+  var FK_LABELS=["نوع النشاط","مرحلة المشروع","موعد الإطلاق","نطاق الخدمة","مكان العمل","قنوات البيع","الميزانية","جنس العميل","الشريحة السعرية","الأعمار","إحساس العميل","التعامل مع اسم العميل","لغة الاسم","طول الاسم","نوع الاسم","نوع الشعار","الشكل العام","الاتجاه","لغة كتابة الشعار","أماكن الاستخدام","أسلوب الهوية","ألوان مفضلة","ألوان مرفوضة","خلفية الشعار","نوع الخط","سماكة الخط","عدد الباقات","التوصيل","طرق الدفع","هدف أول شهر","الوقت المتاح","الظهور في المحتوى","نبرة الكلام","لغة المحتوى","وضع الفكرة","المهارات والاهتمامات","منتج أو خدمة","التفرغ","الساعات اليومية","التعامل مع الناس","أولوية المشروع","تحمل المخاطرة","وضع المنتجات","مصدر المنتج","عدد المنتجات بالبداية","أولوية المنتج","التخزين","ستايل الشعار"];
+  var FK_TEXTS=["idea","fieldOther","city","persona","problem","comp","edge","own","want","avoid","likeNames","symbol","noSymbol","sub","refs","offer","final","c_email","exp","noIdea","ideasList","suppliers","noProd","skillsOther","logoWish"];
+  var DIG="0123456789abcdefghijklmnopqrstuvwxyz", PRICE="اقتراح فكرة (٤٩ ريال)", built=false;
+  function $(s){return document.querySelector(s);}
+  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+  function esc(x){return String(x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function build(){
+    if(built)return; built=true;
+    $$("#vFikra .ch[data-opts]").forEach(function(g,n){
+      var t=g.getAttribute("data-type")==="radio"?"radio":"checkbox";
+      g.setAttribute("role",t==="radio"?"radiogroup":"group");
+      g.innerHTML=g.getAttribute("data-opts").split("|").map(function(o,i){
+        return '<label><input type="'+t+'" name="fkg'+n+'" value="'+esc(o)+'"><span>'+esc(o)+'</span></label>';}).join("");
+    });
+    /* «أونلاين فقط» ما يجتمع مع محل أو كشك أو معارض */
+    $("#fk_place").addEventListener("change",function(e){var ins=$$("input",$("#fk_place")),on=ins[5],i=ins.indexOf(e.target);
+      if(!e.target.checked)return; if(e.target===on)[2,3,4].forEach(function(k){ins[k].checked=false;}); else if(i>=2&&i<=4)on.checked=false;});
+    $("#fk_pathQ").addEventListener("change",function(){$("#fk_ideasQ").hidden=pathV()!=="1";});
+    $("#fk_send").addEventListener("click",submit);
+    $("#fkForm").addEventListener("change",function(){$("#fk_warn").hidden=true;});
+  }
+  function pathV(){var r=$("input[name=fk_path]:checked");return r?r.value:"";}
+  function grp(l){return $$("#vFikra .ch[data-label]").filter(function(g){return g.getAttribute("data-label")===l;})[0];}
+  function txt(id){var e=document.getElementById("fk_"+id);return e?String(e.value).replace(/\|/g,"/").replace(/\s*\n+\s*/g," ").trim():"";}
+  function code(){
+    var p=pathV();
+    var chips=FK_LABELS.map(function(l){
+      if(l==="وضع الفكرة")return p;
+      var g=grp(l); if(!g)return "";
+      return $$("input",g).map(function(i,k){return i.checked?DIG[k]:"";}).join("");
+    }).join(".");
+    var texts=FK_TEXTS.map(function(id){return (id==="ideasList"&&p!=="1")?"":txt(id);});
+    return ["ATQ1","-",chips,"","0","00000000","-","-"].concat(texts).join("|");
+  }
+  function oid(){var a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",s="FKR-";var b=window.crypto&&crypto.getRandomValues?crypto.getRandomValues(new Uint8Array(4)):[1,2,3,4].map(function(){return Math.random()*256|0;});for(var i=0;i<4;i++)s+=a[b[i]%32];return s;}
+  function warn(m,el){var w=$("#fk_warn");w.hidden=false;w.textContent=m;if(el){el.scrollIntoView({block:"center",behavior:"smooth"});if(el.focus&&/INPUT|TEXTAREA/.test(el.tagName))setTimeout(function(){el.focus();},350);}}
+  function submit(){
+    var p=pathV(),name=$("#fk_name").value.trim(),phone=$("#fk_phone").value.replace(/[\s-]/g,"");
+    if(!p)return warn("اختر وين أنت الحين: ما عندك فكرة، أو عندك أفكار محتار بينها.",$("#fk_pathQ"));
+    if(p==="1"&&!$("#fk_ideasList").value.trim())return warn("اكتب الأفكار اللي في بالك عشان نقارن بينها.",$("#fk_ideasList"));
+    if(!$$("input:checked",$("#fk_skills")).length&&!$("#fk_skillsOther").value.trim())return warn("اختر شي واحد على الأقل من اهتماماتك، أو اكتبه بنفسك.",$("#fk_skills"));
+    if(!$$("input:checked",$("#fk_budget")).length)return warn("اختر ميزانية البداية، لأن الأفكار تتغير كثير على حسبها.",$("#fk_budget"));
+    if(!name)return warn("اكتب اسمك عشان نعرف نتواصل معك.",$("#fk_name"));
+    if(!/^(05\d{8}|\+?9665\d{8}|\+?\d{9,15})$/.test(phone))return warn("اكتب رقم جوال صحيح، مثل 0512345678.",$("#fk_phone"));
+    $("#fk_warn").hidden=true;
+    var id=oid(), pv=$("input[name=fk_path]:checked").getAttribute("data-v");
+    var msg="السلام عليكم، هذا طلبي في «أطلق»\nرقم الطلب: "+id+"\nالباقة: "+PRICE+"\nالفكرة: "+pv+"\nالاسم: "+name+"\nالجوال: "+phone+"\n\n(لا تعدّل الكود اللي تحت)\n"+code();
+    var url="https://wa.me/966539622338?text="+encodeURIComponent(msg);
+    try{gtag('event','send_order',{service:'اقتراح فكرة'});}catch(e){}
+    window.open(url,"_blank","noopener");
+    done(id,name,url,msg);
+  }
+  function done(id,name,url,msg){
+    var c=$("#fk_done");
+    c.innerHTML='<h3>باقي خطوة وحدة يا '+esc(name)+'</h3><p>رقم طلبك: <b class="oid">'+id+'</b></p>'+
+      '<p>انفتح لك واتساب برسالة جاهزة فيها طلبك. اضغط <b>إرسال</b> هناك عشان يوصلنا، ونرسل لك بعد الدفع ملف الأفكار الثلاث خلال ٢٤ ساعة.</p>'+
+      '<div class="acts"><a href="'+url+'" target="_blank" rel="noopener">ما انفتح واتساب؟ اضغط هنا</a><button type="button" id="fk_edit">رجوع لتعديل الإجابات</button></div>'+
+      '<details style="margin-top:12px"><summary style="cursor:pointer;font-size:13px;color:var(--muted)">واتساب ما اشتغل؟ انسخ الطلب وأرسله لنا</summary><textarea id="fk_copyTxt" readonly></textarea><div class="acts"><button type="button" id="fk_cp">نسخ الطلب</button></div></details>';
+    $("#fk_copyTxt").value=msg;
+    $("#fk_cp").onclick=function(e){var b=e.currentTarget;function ok(){b.textContent="تم النسخ";}
+      if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(msg).then(ok,function(){$("#fk_copyTxt").select();b.textContent="النص محدد، انسخه";});else{$("#fk_copyTxt").select();try{document.execCommand("copy");ok();}catch(x){}}};
+    $("#fk_edit").onclick=function(){c.hidden=true;$("#fkForm").parentNode.hidden=false;$("#vFikra .final").hidden=false;$("#fkForm").scrollIntoView({block:"start"});};
+    $("#fkForm").parentNode.hidden=true; $("#vFikra .final").hidden=true; c.hidden=false; window.scrollTo(0,0);
+  }
+  window.fkShow=function(){build();};
+  window.fkCode=code;
+  if(/^#\/fikra/.test(location.hash))window.fkShow();
 })();
 </script>
 </body></html>
